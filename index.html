@@ -21,7 +21,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learning Information Hub</title>
+  <title>Manager Essentials</title>
   <!-- Bootstrap 5.3.6 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Custom Stylesheet -->
@@ -46,7 +46,7 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 
       <!-- Site Title (Center) -->
       <div class="center-heading text-center flex-grow-1">
-        <h1 class="mb-0">Learning Information Hub</h1>
+        <h1 class="mb-0">Manager Essentials</h1>
       </div>
 
       <!-- Logos (Right) -->
@@ -61,10 +61,9 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
 
     <!-- Hero Banner -->
     <div class="banner-wrapper text-center position-relative">
-      <img src="https://assets.codepen.io/8889025/LEA_Banner3.png" alt="Welcome Hub Banner"
-        class="Banner_image w-100" />
+      <img src="Assets/BSA_L&D.png" alt="Learning Information Hub" class="Banner_image w-100" />
       <div class="banner-text-overlay">
-        <h1>Lady Elizabeth Ann NHS Trust</h1>
+        <h1>NHSBSA - Manager Essentials</h1>
       </div>
     </div>
 
@@ -94,42 +93,14 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
                 <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
+                <a class="nav-link" onclick="showPage('MELC')">Manager Essentials Learning Catalogue</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  onclick="openPopup('https://nhsbsauk.sharepoint.com/sites/People/SitePages/The-Learning-Centre.aspx')">Learning
+                  Centre on My Hub</a>
               </li>
 
-              <!-- ==== ADD A DROPDOWN MENU ==== -->
-              <!-- To create a dropdown menu, use this structure -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                  onclick="showPage('CC')">Catalogue</a>
-                <ul class="dropdown-menu">
-                  <!-- ==== ADD A NORMAL DROPDOWN ITEM ==== -->
-                  <!-- Each dropdown item below links to a page -->
-                  <li>
-                    <a class="dropdown-item" onclick="showPage('SaMT')">Statutory and Mandatory Training</a>
-                  </li>
-
-                  <!-- ==== ADD A SUBMENU ==== -->
-                  <!-- To add a submenu (nested within dropdown), use this structure -->
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item submenu-toggle" href="#" onclick="showPage('NSMT')">Non Statutory and
-                      Mandatory Training</a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" onclick="showPage('NSaMT1')">eLearning Modules</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" onclick="showPage('NSaMT2')">Workshops</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" onclick="showPage('NSaMT3')">Coaching Sessions</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <!-- ==== END SUBMENU ==== -->
-                </ul>
-              </li>
-              <!-- ==== END DROPDOWN MENU ==== -->
               <details class="mobile-toolbar d-sm-none mt-3">
                 <summary class="btn btn-outline-secondary w-100">
                   Search & Settings
@@ -233,7 +204,6 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
     </div>
     <div class="offcanvas-body">
       <ul class="nav navbar-nav flex-column">
-        <!-- Simple Links -->
         <li class="nav-item">
           <a class="nav-link" onclick="showPage('home')">Home</a>
         </li>
@@ -244,27 +214,12 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
           <a class="nav-link" onclick="showPage('faqs')">FAQs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" onclick="showPage('SUP')">Support Request</a>
+          <a class="nav-link" onclick="showPage('MELC')">Manager Essentials Learning Catalogue</a>
         </li>
-
-        <!-- Top-Level Dropdown -->
         <li class="nav-item">
-          <button class="nav-link toggle-submenu w-100 text-start">Catalogue ▾</button>
-          <ul class="submenu list-unstyled ms-3">
-            <li>
-              <a class="nav-link" onclick="showPage('SaMT')">Statutory & Mandatory Training</a>
-            </li>
-
-            <!-- Nested Submenu -->
-            <li>
-              <button class="nav-link toggle-submenu w-100 text-start">Non Statutory ▾</button>
-              <ul class="submenu list-unstyled ms-3">
-                <li><a class="nav-link" onclick="showPage('NSaMT1')">eLearning Modules</a></li>
-                <li><a class="nav-link" onclick="showPage('NSaMT2')">Workshops</a></li>
-                <li><a class="nav-link" onclick="showPage('NSaMT3')">Coaching Sessions</a></li>
-              </ul>
-            </li>
-          </ul>
+          <a class="nav-link"
+            onclick="openPopup('https://nhsbsauk.sharepoint.com/sites/People/SitePages/The-Learning-Centre.aspx')">Learning
+            Centre on My Hub</a>
         </li>
       </ul>
 
@@ -312,24 +267,23 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
       <div class="row">
         <!-- Sidebar Gradient Title -->
         <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Learning and Development Hub</h3>
+          <h3 class="gradient-text">
+            <div class="LOD_text">Manager Essentials</div>
+          </h3>
         </div>
         <!-- Main Welcome Text -->
         <div class="col-md-8">
-          <h4>Welcome to the Learning and Development Hub</h4>
-          <p>
-            The hub provides access to a range of information to support
-            personal learning and development needs, guidance on using ESR
-            Learning Management, and a catalogue of available training
-            courses.
+          <h4>Welcome to Manager Essentials</h4>
+          <p>Manager Essentials aims to provide you with what you need to get a headstart as a manager at the NHSBSA.
           </p>
-          <p>
-            We hope you find this page useful and informative. Please explore
-            the sections and links provided. If you have feedback or
-            suggestions, we’d love to hear from you. Your input helps us
-            improve and serve you better — thank you for being part of our
-            team.
-          </p>
+
+          <p>Here you will find a range of resources and learning opportunities that will allow you to ease into your
+            management role effectively. We have taken the most common aspects of policy, procedure and system that you
+            will encounter alongside a management development programme that will support you in implementing those
+            approaches and developing excellent teams and enduring relationships. </p>
+
+          <p>You will also have the opportunity to consider the management style that is unique to you and consistent
+            with the values of the NHSBSA.</p>
         </div>
       </div>
     </div>
@@ -359,141 +313,39 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
       <!-- ============================================ -->
       <div class="row">
         <div class="col-md">
-          <!-- Guide: Identifying Outstanding Training -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#outstandingTrainingModal">
-            Identifying Training that is Outstanding
-          </button>
-          <div class="modal fade" id="outstandingTrainingModal" tabindex="-1"
-            aria-labelledby="outstandingTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="outstandingTrainingModalLabel">
-                    Identifying Outstanding Training
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg?scrollToActionId=f250e1dd"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Enrolling onto e-Learning -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#enrolmentModal">
-            Enrolling onto e-Learning Courses
-          </button>
-          <div class="modal fade" id="enrolmentModal" tabindex="-1" aria-labelledby="enrolmentModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="enrolmentModalLabel">
-                    Enrolling onto e-Learning Courses
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=426c0f0f"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Playing e-Learning Modules -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#playCoursesModal">
-            Playing e-Learning Courses you are Enrolled On
-          </button>
-          <div class="modal fade" id="playCoursesModal" tabindex="-1" aria-labelledby="playCoursesModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="playCoursesModalLabel">
-                    Playing Enrolled e-Learning Courses
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=4c19c4b1"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Classroom Training Enrolment -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#classroomTrainingModal">
-            Enrolling onto Classroom Training
-          </button>
-          <div class="modal fade" id="classroomTrainingModal" tabindex="-1"
-            aria-labelledby="classroomTrainingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="classroomTrainingModalLabel">
-                    Enrolling onto Classroom Training
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=17ab0147"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Guide: Viewing Booked Classes -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#bookedClassesModal">
-            Viewing Details of Classes you are Booked On
-          </button>
-          <div class="modal fade" id="bookedClassesModal" tabindex="-1" aria-labelledby="bookedClassesModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="bookedClassesModalLabel">
-                    Viewing Booked Class Details
-                  </h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-                <div class="card-body">
-                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=1fda98e6"
-                    width="100%" height="800" allowfullscreen style="
-                        aspect-ratio: 16 / 12;
-                        border: 0;
-                        min-height: 480px;
-                      "></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Cards -->
+          <h5>Guides for Employee Self Service</h5>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/ESS20/index.html');">How do I manage my compliance
+            and competency record?</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/ESS17/index.html');" role="button">Learner Hompage
+            Overview</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/ESS18/index.html');" role="button">How do I enrol
+            on training?</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/ESS33/index.html');" role="button">How do I record
+            external learning?</button>
+          <h5>Guides for Manager Self Service</h5>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/MSS20/index.html');">How do I manage my team's
+            compliance and competency records?</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/MSS13/index.html');" role="button">How do I view
+            the employee's learner homepage?</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/MSS14/index.html');" role="button">How do I enrol
+            an employee in training?</button>
+          <button class="btn btn-primary w-100 text-start mb-2"
+            onclick="openPopup('https://my.esr.nhs.uk/dashboard/lrst/MSS16/index.html');" role="button">How do I record
+            external learning for an employee?</button>
+
+
+
+
+
+
+
         </div>
       </div>
     </div>
@@ -510,20 +362,17 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
         </div>
         <!-- FAQ Introduction -->
         <div class="col-md-8">
-          <h4>ESR Learning Management Guidance</h4>
-          <p>
-            This section provides answers to common questions about using the
-            ESR Learning Management system.
-          </p>
+          <h4>ESR Learning Management Frequently Asked Questions</h4>
+          <p>This section provides access to common questions that may arise when using the ESR Learning Management
+            system.</p>
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-md">
-          <!-- FAQ 1: Compliance Not Updated -->
+          <!-- FAQ 1 -->
           <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
             data-bs-target="#complianceIssueModal">
-            I've completed training but my compliance hasn't updated — what
-            can I do?
+            I have completed some training and my Compliance has not updated, what can I do?
           </button>
           <div class="modal fade" id="complianceIssueModal" tabindex="-1" aria-labelledby="complianceIssueModalLabel"
             aria-hidden="true">
@@ -531,29 +380,29 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
                   <h5 class="modal-title mb-0" id="complianceIssueModalLabel">
-                    Compliance Not Updated
+                    I have completed some training and my Compliance has not updated, what can I do?
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    <strong>E-learning:</strong> Ensure you’ve clicked the
-                    house icon to exit and earned a completion certificate.
-                  </p>
-                  <p>
-                    <strong>Face-to-face/MS Teams:</strong> Allow up to 10
-                    working days for manual updates. If still missing, email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.
-                  </p>
+                  <p>To ensure your training has been completed correctly, please check the following.</p>
+                  <ol>
+                    <li>Using the My Compliance portlet, check you are subscribed or renewing a certification. If not
+                      subscribe to the certification and allow 24 hours for your record to be updated.</li>
+                    <li>On your learner home page, under e-learning enrolments check the status of the enrolment. If
+                      this is showing as incomplete, click the play button and complete the training, ensuring you click
+                      on the house to save your progress.</li>
+                  </ol>
+                  <p>If neither of these resolves the issue, please contact the Training Team.</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- FAQ 2: External Training Recognition -->
+          <!-- FAQ 2 -->
           <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
             data-bs-target="#externalTrainingModal">
-            Will mandatory training from another organisation be recognised?
+            How do I review all the training required for my job?
           </button>
           <div class="modal fade" id="externalTrainingModal" tabindex="-1" aria-labelledby="externalTrainingModalLabel"
             aria-hidden="true">
@@ -561,26 +410,23 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
                   <h5 class="modal-title mb-0" id="externalTrainingModalLabel">
-                    External Training Recognition
+                    How do I review all the training required for my job?
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    Most training transfers via the IAT process. If any
-                    records appear missing, email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with
-                    evidence for manual review.
-                  </p>
+                  <p>Expand the Compliance Portlet and click on View My Compliance button.</p>
+                  <p>Subjects that are required will show as red, amber or green. Blue competencies are additional
+                    training that you have completed but are not currently required for your role.</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- FAQ 3: Certification Expired -->
+          <!-- FAQ 3 -->
           <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
             data-bs-target="#certificationExpiredModal">
-            What do I do if my certification says "expired"?
+            Is mandatory training that is completed in another organisation recognised by NHSBSA?
           </button>
           <div class="modal fade" id="certificationExpiredModal" tabindex="-1"
             aria-labelledby="certificationExpiredModalLabel" aria-hidden="true">
@@ -588,29 +434,23 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
                   <h5 class="modal-title mb-0" id="certificationExpiredModalLabel">
-                    Certification Expired
+                    Is mandatory training that is completed in another organisation recognised by NHSBSA?
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    <strong>Renew your competency:</strong> Re-access the
-                    course as soon as possible. If progress resets, ask your
-                    manager to confirm completion via email.
-                  </p>
-                  <p>
-                    If you're locked out or concerned, contact
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a>.
-                  </p>
+                  <p>Training completed in other NHS organisations is automatically transferred via ESR. For training
+                    that is not, please contact the Learning and Development team with evidence of the training you want
+                    recognised.</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- FAQ 4: Incorrect Requirements Display -->
+          <!-- FAQ 4 -->
           <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
             data-bs-target="#incorrectRequirementModal">
-            My Compliance Portlet shows the wrong requirements — what now?
+            Can I complete training whilst I am an applicant?
           </button>
           <div class="modal fade" id="incorrectRequirementModal" tabindex="-1"
             aria-labelledby="incorrectRequirementModalLabel" aria-hidden="true">
@@ -618,26 +458,23 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
                   <h5 class="modal-title mb-0" id="incorrectRequirementModalLabel">
-                    Incorrect Compliance Requirements
+                    Can I complete training whilst I am an applicant?
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    Email
-                    <a href="mailto:LEA_LD@nhs.net">LEA_LD@nhs.net</a> with
-                    the incorrect details so your matrix can be updated.
+                  <p>You can use the My Compliance portlet to complete e-learning prior to your start date if you wish.
                   </p>
+                  <p>Face to face or virtual classes should not be booked until you have started in post.</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- FAQ 5: Missing Play Button -->
+          <!-- FAQ 5 -->
           <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
             data-bs-target="#playButtonIssueModal">
-            My ‘Play’ button is greyed out or missing — how do I start the
-            course?
+            What do I do if my certification subscription status is "expired"?
           </button>
           <div class="modal fade" id="playButtonIssueModal" tabindex="-1" aria-labelledby="playButtonIssueModalLabel"
             aria-hidden="true">
@@ -645,33 +482,33 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
                   <h5 class="modal-title mb-0" id="playButtonIssueModalLabel">
-                    Missing Play Button Help
+                    What do I do if my certification subscription status is "expired"?
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <ol>
-                    <li>
-                      Go to ‘My Compliance’, select the course, and click the
-                      magnifying glass icon.
-                    </li>
-                    <li>
-                      If unsubscribed, click 'Details', then 'Subscribe' and
-                      'Enrol'.
-                    </li>
-                    <li>
-                      On the next screen, click 'Enrol' for course modules.
-                    </li>
-                    <li>
-                      If the green 'Play' button doesn't appear, try 'Select
-                      an Action' and choose 'Play'.
-                    </li>
-                    <li>
-                      If nothing appears, click the module title to reveal a
-                      secondary 'Select an Action'.
-                    </li>
-                  </ol>
+                  <p>Contact the Learning and Development team.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#FAQ6Modal">
+            What do I do if the play button in the my learner home page is greyed out?
+          </button>
+          <div class="modal fade" id="FAQ6Modal" tabindex="-1" aria-labelledby="FAQ6ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="FAQ6ModalLabel">
+                    What do I do if the play button in the my learner home page is greyed out?
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p>To resolve this access the learning via the My Compliance portlet.</p>
                 </div>
               </div>
             </div>
@@ -681,202 +518,274 @@ Ensure divs use `<div id="ID" class="page">` and toggle visibility via JS.
     </div>
   </div>
   <!-- ====================================== -->
-  <!-- ====== COURSE CATALOGUE SECTION ====== -->
+  <!-- ====== Manager Essentials Learning Catalogue SECTION ====== -->
   <!-- ====================================== -->
-  <div id="CC" class="page">
+  <div id="MELC" class="page">
     <div class="container">
       <div class="row">
         <!-- Sidebar Gradient -->
         <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Course Catalogue</h3>
+          <h3 class="gradient-text">Manager Essentials Learning Catalogue</h3>
         </div>
         <!-- Catalogue Description -->
         <div class="col-md-8">
-          <h4>Browse Available Courses</h4>
-          <p>
-            You can book these via ESR. The catalogue is divided by type
-            below:
-          </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
+          <h4>Manager Essentials Learning Catalogue</h4>
+          <p>This section provides access to courses you can book via ESR.</p>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- ==================================================== -->
-  <!-- ====== STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ==================================================== -->
-  <div id="SaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Statutory and Mandatory Training</h3>
-        </div>
-        <!-- Section Description -->
-        <div class="col-md-8">
-          <h4>Required Training for All Roles</h4>
-          <p>
-            Courses shown in My Compliance within ESR must be completed. Use
-            the guides section for instructions on how to launch these.
-          </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
-          </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
+
       <div class="row mt-4">
         <div class="col-md">
-          <!--  Basic Life Support -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#blsModal">
-            Basic Life Support (BLS)
+          <h4>Core Programme</h4>
+          <p> Below you will find our core programme, which should be completed in turn:</p>
+          <ol>
+            <li>Manager Induction
+            <li>Health and Safety for Managers
+            <li>Listen Up
+            <li>Embedding Manager Essentials
+              <ol type="a">
+                <li>The Manager Transition
+                <li>Interpersonal Skills
+                <li>Management Skills and Techniques
+              </ol>
+          </ol>
+          <p>Upon successful completion of the above four elements of Manager Essentials you will receive the Manager
+            Essentials Competency.</p>
+
+
+          <!--  Manager induction -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal01">
+            Manager induction
           </button>
-          <div class="modal fade" id="blsModal" tabindex="-1" aria-labelledby="blsModalLabel" aria-hidden="true">
+          <div class="modal fade" id="ccModal01" tabindex="-1" aria-labelledby="ccModal01Label" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="blsModalLabel">
-                    Basic Life Support (BLS)
+                  <h5 class="modal-title mb-0" id="ccModal01Label">
+                    Manager induction
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    <strong>Who should attend:</strong> Staff with emergency
-                    response duties.
-                  </p>
-                  <p>
-                    <strong>Method:</strong> Face-to-face session (3 hours 30
-                    minutes).
-                  </p>
-                  <p>
-                    <strong>Details:</strong> Covers theory and practical
-                    assessment. Mandatory for roles with access to emergency
-                    equipment.
-                  </p>
-                  <p>
-                    <a class="btn btn-primary" href="#"
-                      onclick="openPopup('https://intranet.tewv.nhs.uk/training-centre')">BOOK NOW</a>
-                  </p>
+                  <p><strong>Audience:</strong></p>
+                  <p>Managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>Blended</p>
+                  <p><strong>Description:</strong></p>
+                  <p>This eLearning forms part of the Manager's Induction training, which is a portion of our training
+                    package for new managers called Manager Essentials. This training will take approximately 3 hours to
+                    complete, but you don't need to complete it in one sitting. The system will remember your progress
+                    and you can jump back in, where you left off. You will need to fully complete this elearning prior
+                    to attending the teams session. This session will build on your learning and give you a chance to
+                    develop your knowledge.</p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=V8x8h54gwvZvICy9i4i4dw..&params=VpwbJlq4kpbQWdHGrrUMA9ZeSVyiuxEHSDbO1WN6qbHjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol on Part 1</a>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=wu_zLcEOgqPVHGrahfMvaw..&params=nl8IFBdzgjXUzbUhVL.wBkJ3yd-fA6GGByR-k1cyO7-jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol on Part 2</a>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ======================================================== -->
-  <!-- ====== NON STATUTORY & MANDATORY TRAINING SECTION ====== -->
-  <!-- ======================================================== -->
-  <div id="NSaMT" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Non Statutory Mandatory Training</h3>
-        </div>
-        <!-- Page Description -->
-        <div class="col-md-8">
-          <h4>Optional & Supplementary Courses</h4>
-          <p>
-            This section lists additional courses available via ESR that
-            complement statutory training.
-          </p>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('SaMT')">
-            Statutory and Mandatory Training
+          <!-- Health and Safety for Managers -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal02">
+            Health and Safety for Managers
           </button>
-          <button class="btn btn-primary w-100 text-start mb-2" onclick="showPage('NSaMT')">
-            Non Statutory and Mandatory Training
-          </button>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md">
-          <!-- Example: Appraiser Training Modal -->
-          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal"
-            data-bs-target="#appraiserTrainingModal">
-            Appraiser Training
-          </button>
-          <div class="modal fade" id="appraiserTrainingModal" tabindex="-1"
-            aria-labelledby="appraiserTrainingModalLabel" aria-hidden="true">
+          <div class="modal fade" id="ccModal02" tabindex="-1" aria-labelledby="ccModal02Label" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
-                  <h5 class="modal-title mb-0" id="appraiserTrainingModalLabel">
-                    Appraiser Training
+                  <h5 class="modal-title mb-0" id="ccModal02Label">
+                    Health and Safety for Managers
                   </h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
                 </div>
                 <div class="card-body">
-                  <p>
-                    <strong>Audience:</strong>
-                    <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <strong>Method:</strong> <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <strong>Additional Info:</strong>
-                    <em>Details to be confirmed</em>
-                  </p>
-                  <p>
-                    <a class="btn btn-primary" href="#" onclick="openPopup('')">BOOK NOW</a>
-                  </p>
+                  <p><strong>Audience:</strong></p>
+                  <p>Managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>e-Learning</p>
+                  <p><strong>Description:</strong></p>
+                  <p>This elearning module will cover health and safety factors and responsibilities that are important
+                    to all managers.</p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=wu_zLcEOgqPVHGrahfMvaw..&params=3o9sGYxaP3U7tUWcL-htcLANzRlV1AJ2WREbdp0Sfsbjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Listen Up -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal03">
+            Listen Up
+          </button>
+          <div class="modal fade" id="ccModal03" tabindex="-1" aria-labelledby="ccModal03Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="ccModal03Label">
+                    Listen Up
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p><strong>Audience:</strong></p>
+                  <p>Line and middle managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>e-Learning</p>
+                  <p><strong>Description:</strong></p>
+                  <p>This module provides information on how to foster an environment that encourages and supports
+                    speaking up. It includes tips on listening well and taking action. It also explores how speaking up
+                    can drive learning and improvement and how to identify and address barriers to speaking up.</p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=V8x8h54gwvZvICy9i4i4dw..&params=lnxh2a2myEw54EoSO-68TVDJIk5iOI1Gvu8bpfpYGavjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- End of Cards -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ===================================== -->
-  <!-- ====== SUPPORT REQUEST SECTION ====== -->
-  <!-- ===================================== -->
-  <div id="SUP" class="page">
-    <div class="container">
-      <div class="row">
-        <!-- Sidebar Gradient -->
-        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
-          <h3 class="gradient-text">Support Request</h3>
-        </div>
-        <!-- Page Introduction -->
-        <div class="col-md-8">
-          <h4>Need Help with ESR Learning Management?</h4>
-          <p>
-            If you couldn’t find the guidance you needed from this site,
-            please use the form below to reach out to the Learning &
-            Development team. We’ll aim to respond as soon as possible.
-          </p>
-        </div>
-      </div>
-      <!-- Embedded Support Form -->
-      <div class="row mt-4">
-        <div class="col-md">
-          <div class="ratio ratio-4x3" style="max-width: 100%">
-            <iframe
-              src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsWOyxEjajBLZtrQAAAAAAAAAAAAa_eBfvaBUOU4zQ0wzV1IVOFkxM05SUK8yVkNBM1BWVS4u&embed=true"
-              allowfullscreen style="border: none">
-            </iframe>
+          <h5>Manager's Onboarding</h5>
+          <p>The following courses are aimed at new managers to support them in their new role</p>
+
+          <!-- The Manager Transition -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal04">
+            The Manager Transition
+          </button>
+          <div class="modal fade" id="ccModal04" tabindex="-1" aria-labelledby="ccModal04Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="ccModal04Label">
+                    The Manager Transition
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p><strong>Audience:</strong></p>
+                  <p></p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>Blended</p>
+                  <p><strong>Description:</strong></p>
+                  <p>Managers</p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=V8x8h54gwvZvICy9i4i4dw..&params=KSOeZIZhGCAO.kMmBQXl9u-cxg4abCUT0DtteOQl.T3jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- Interpersonal Skills -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal05">
+            Interpersonal Skills
+          </button>
+          <div class="modal fade" id="ccModal05" tabindex="-1" aria-labelledby="ccModal05Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="ccModal05Label">
+                    Interpersonal Skills
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p><strong>Audience:</strong></p>
+                  <p>Managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>Blended</p>
+                  <p><strong>Description:</strong></p>
+                  <p></p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=V8x8h54gwvZvICy9i4i4dw..&params=kuAhF4zPEnhEFzeF2Ijj6zajHv2nRdsDeXRhG5ogyrDjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Management Skills and Techniques -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal06">
+            Management Skills and Techniques
+          </button>
+          <div class="modal fade" id="ccModal06" tabindex="-1" aria-labelledby="ccModal06Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="ccModal06Label">
+                    Management Skills and Techniques
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p><strong>Audience:</strong></p>
+                  <p>Managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>Blended</p>
+                  <p><strong>Description:</strong></p>
+                  <p></p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk:443/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=V8x8h54gwvZvICy9i4i4dw..&params=YCg0l4bNIy964Uz1hFGCk9PcrJXSo2sxuWj-FLOgnSfjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4>Non-Mandatory Courses</h4>
+          <p>The courses below are provided in addition to the mandatory programmes to support and develop managers in
+            their roles.</p>
+
+          <!-- Recruitment and Selection -->
+          <button class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#ccModal07">
+            Recruitment and Selection
+          </button>
+          <div class="modal fade" id="ccModal07" tabindex="-1" aria-labelledby="ccModal07Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header btn btn-primary d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="ccModal07Label">
+                    Recruitment and Selection
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="card-body">
+                  <p><strong>Audience:</strong></p>
+                  <p>Managers</p>
+                  <p><strong>Delivery Mode:</strong></p>
+                  <p>Blended</p>
+                  <p><strong>Description:</strong></p>
+                  <p>This course aims to build manager's confidence and understanding of the recruitment process and to
+                    ensure all candidates experience a high quality, fair, and efficient recruitment journey. To build
+                    awareness of the practical implications and steps needed to successfully recruit the right talent
+                    for the NHS Business Services Authority (NHSBSA).</p>
+                  <p>Candidates should experience an efficient and timely recruitment process that leaves them with a
+                    positive experience and impression of NHSBSA.</p>
+                  <p>By completing this course you will be given the tools, advice and opportunities to ask questions
+                    related to end-to-end recruitment processes, ensuring we have a consistent approach in alignment
+                    with best practice from vacancy to appointment.</p>
+                  <a class="btn btn-primary w-100 mb-2"
+                    href="https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=8wIdKTGTFQSmmjs2UXCvuA..&params=VTjbzQBNYNpoHz7jc4T7xu2TqMcVwve50idzyACYgt7jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c"
+                    role="button">Enrol</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Cards -->
+
         </div>
       </div>
+
     </div>
   </div>
+
   <!-- ================================= -->
   <!-- ============ FOOTER ============= -->
   <!-- ================================= -->
